@@ -1,17 +1,19 @@
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .wrapper {
   margin: 0 auto;
-  width: 50%;
+  width: 50vw;
 }
 .bayan-title {
 }
 .selector-block {
+  color: #4478d3;
+  transition: 0.3s;
 }
 .selector-block:hover {
-  color: blue;
+  color: #000;
 }
 .selector-item {
   display: flex;
@@ -20,30 +22,37 @@ body {
 }
 .selector-label {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-}
-.selector-title {
-  background-color: rgb(227, 242, 242);
-  display: block;
-  width: 100%;
   cursor: pointer;
-  padding: 1em 0;
 }
-.selector-icon {
-}
+
 .selector-input {
   width: 0;
   height: 0;
 }
 
 .selector-input:checked ~ .selector-meme {
-  display: block;
+  max-height: max-content;
   opacity: 1;
+}
+.selector-input:checked ~ .label-title {
+  color: #4478d3;
+}
+.selector-block:hover .label-icon:last-of-type {
+  opacity: 1;
+}
+.selector-input:checked ~ .label-header .label-icon {
+  transform: rotate(45deg);
+}
+.selector-input:hover ~ .label-header .label-icon {
+  transform: rotate(45deg);
 }
 .selector-input:hover ~ .selector-meme {
-  display: block;
+  max-height: max-content;
   opacity: 1;
 }
+
 /*.selector-input:hover ~ .selector-meme {
   display: block;
   opacity: 1;
@@ -52,12 +61,27 @@ body {
   display: block;
 }
 */
+.label-header {
+  display: flex;
+  justify-content: space-between;
+}
+.label-title {
+}
+.label-icon {
+  opacity: 0;
+  width: 2em;
+  display: block;
+  transition: 0.3s;
+}
 .selector-meme {
-  display: none;
+  display: block;
+  max-height: 0;
   padding: 0;
   justify-self: center;
-  transition: 2s all;
+  transition: 0.9s;
   opacity: 0;
-  width: 35%;
+  width: 40%;
   align-self: center;
 }
+/*------media--------------------------------------------------------------------------------------------------------*/
+@media();
