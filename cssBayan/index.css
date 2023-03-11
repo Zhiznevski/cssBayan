@@ -1,0 +1,51 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+}
+.bayan-title {
+}
+.selector-block {
+}
+.selector-item {
+  border-top: 0.1em solid rgb(116, 193, 248);
+}
+.selector-label {
+  display: flex;
+  justify-content: space-between;
+}
+.selector-title {
+  background-color: rgb(227, 242, 242);
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 1em 0;
+}
+.selector-icon {
+}
+.selector-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+.selector-input:hover + .selector-content {
+  display: block;
+}
+/*.selector-input:checked + .selector-content {
+  display: block;
+}
+*/
+.selector-content {
+  display: none;
+  padding: 1em 0;
+  justify-self: center;
+}
+.selector-meme {
+  display: block;
+  margin: 0 auto;
+  max-width: 50%;
+  align-self: center;
+}
