@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 .wrapper {
@@ -10,7 +10,12 @@ body {
 }
 .selector-block {
 }
+.selector-block:hover {
+  color: blue;
+}
 .selector-item {
+  display: flex;
+  flex-direction: column;
   border-top: 0.1em solid rgb(116, 193, 248);
 }
 .selector-label {
@@ -29,23 +34,30 @@ body {
 .selector-input {
   width: 0;
   height: 0;
-  appearance: none;
 }
-.selector-input:hover + .selector-content {
+
+.selector-input:checked ~ .selector-meme {
   display: block;
+  opacity: 1;
 }
+.selector-input:hover ~ .selector-meme {
+  display: block;
+  opacity: 1;
+}
+/*.selector-input:hover ~ .selector-meme {
+  display: block;
+  opacity: 1;
+}  */
 /*.selector-input:checked + .selector-content {
   display: block;
 }
 */
-.selector-content {
-  display: none;
-  padding: 1em 0;
-  justify-self: center;
-}
 .selector-meme {
-  display: block;
-  margin: 0 auto;
-  max-width: 50%;
+  display: none;
+  padding: 0;
+  justify-self: center;
+  transition: 2s all;
+  opacity: 0;
+  width: 35%;
   align-self: center;
 }
