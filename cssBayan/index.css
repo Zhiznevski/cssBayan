@@ -1,0 +1,147 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fdf9;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.bayan-title {
+  margin: 0;
+}
+
+.selector-block {
+  color: #085ace;
+  transition: 0.3s;
+}
+
+.selector-item {
+  display: flex;
+  flex-direction: column;
+  border-top: 0.1em solid rgb(104, 106, 103);
+}
+
+.selector-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.selector-input {
+  width: 0;
+  height: 0;
+}
+
+.selector-input:checked ~ .selector-meme {
+  height: 17em;
+  scale: 1;
+  transition: 0.3s;
+}
+
+.selector-input:checked ~ .label-header .label-icon {
+  transform: rotate(45deg);
+  transition: 0.3s;
+}
+
+.selector-input:checked ~ .label-header .label-title {
+  color: #000;
+  transition: 0.3s;
+}
+
+.label-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label-title {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.label-icon {
+  opacity: 0;
+  width: 2em;
+  display: block;
+  transition: 0.3s;
+}
+
+.selector-meme {
+  display: block;
+  height: 0;
+  padding: 0;
+  justify-self: center;
+  transition: 0.3s;
+  scale: 0;
+  width: 19em;
+  align-self: center;
+  margin-bottom: 0.5rem;
+}
+
+/*------media--------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 819px) {
+  body {
+    font-size: 0.6875rem;
+  }
+  .wrapper {
+    width: 80vw;
+  }
+  .label-icon {
+    opacity: 1;
+  }
+  .selector-meme {
+    width: 22em;
+  }
+}
+
+@media (min-width: 820px) {
+  body {
+    font-size: 0.8125rem;
+  }
+  .wrapper {
+    width: 70vw;
+  }
+  .selector-meme {
+    width: 20em;
+  }
+  .label-icon {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .wrapper {
+    width: 50vw;
+  }
+
+  .selector-block:hover .label-icon:last-of-type {
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  .selector-input:hover ~ .label-header .label-icon {
+    transform: rotate(45deg);
+    opacity: 1;
+    transition: 0.3s;
+  }
+
+  .selector-input:hover ~ .selector-meme {
+    height: 17em;
+    scale: 1;
+    transition: 0.3s;
+  }
+
+  .selector-block:hover .label-title:last-of-type {
+    color: #000;
+    transition: 0.3s;
+  }
+
+  .label-icon {
+    opacity: 0;
+  }
+}
