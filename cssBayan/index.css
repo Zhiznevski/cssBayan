@@ -6,9 +6,11 @@ body {
 .wrapper {
   margin: 0 auto;
 }
+
 .bayan-title {
   margin: 0;
 }
+
 .selector-block {
   color: #085ace;
   transition: 0.3s;
@@ -19,6 +21,7 @@ body {
   flex-direction: column;
   border-top: 0.1em solid rgb(104, 106, 103);
 }
+
 .selector-label {
   display: flex;
   flex-direction: column;
@@ -51,15 +54,18 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .label-title {
   margin: 0.5rem 0 0.5rem 0;
 }
+
 .label-icon {
   opacity: 0;
   width: 2em;
   display: block;
   transition: 0.3s;
 }
+
 .selector-meme {
   display: block;
   height: 0;
@@ -71,9 +77,10 @@ body {
   align-self: center;
   margin-bottom: 0.5rem;
 }
+
 /*------media--------------------------------------------------------------------------------------------------------*/
 
-@media (max-width: 820px) {
+@media (max-width: 819px) {
   body {
     font-size: 0.6875rem;
   }
@@ -83,8 +90,12 @@ body {
   .label-icon {
     opacity: 1;
   }
+  .selector-meme {
+    width: 22em;
+  }
 }
-@media (min-width: 821px) {
+
+@media (min-width: 820px) {
   body {
     font-size: 0.8125rem;
   }
@@ -92,35 +103,45 @@ body {
     width: 70vw;
   }
   .selector-meme {
-    width: 22rem;
+    width: 20em;
   }
   .label-icon {
     opacity: 1;
   }
 }
-@media (min-width: 1440px) {
+
+@media (min-width: 1024px) {
   body {
     font-size: 1rem;
   }
+
   .wrapper {
     width: 50vw;
   }
+
   .selector-block:hover .label-icon:last-of-type {
     opacity: 1;
     transition: 0.3s;
   }
+
   .selector-input:hover ~ .label-header .label-icon {
     transform: rotate(45deg);
     opacity: 1;
     transition: 0.3s;
   }
+
   .selector-input:hover ~ .selector-meme {
     height: 17em;
     scale: 1;
     transition: 0.3s;
   }
+
   .selector-block:hover .label-title:last-of-type {
     color: #000;
     transition: 0.3s;
+  }
+
+  .label-icon {
+    opacity: 0;
   }
 }
